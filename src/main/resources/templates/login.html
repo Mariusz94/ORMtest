@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymelef.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div style="text-align:center;">
+    <span th:if="${exist == false}">Złe halsło lub login</span>
+</div>
+<div style="text-align:right;">
+    <form method="post" action="/login">
+        Login:<input type="text" th:name="login" placeholder="login">
+        Hasło:<input type="password" th:name="password" placeholder=hasło>
+        <input type="submit" value="Zaloguj">
+        <button type="button"><a href="register.html">Zarejestruj</a></button>
+    </form>
+</div>
+<section>
+    <article>
+        <div style="text-align: center;">
+            <h1>Aby zobaczyć strone zaloguj się</h1>
+        </div>
+    </article>
+</section>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<span th:if="${notSamePassword} ? 'hasła nie są takie same' : ''"></span>
+<div style="text-align: right;">
+    <button type="button"><a href="login.html">Zaloguj</a></button>
+</div>
+<center>
+    <form method="post" action="/register" th:object="${createUser}">
+        Login:<input type="text" th:field="*{login}" placeholder="login">
+        <br/>
+        Hasło:<input type="password" th:field="*{password}" placeholder=hasło>
+        <br/>
+        Powtórz hasło:<input type="password" th:field="*{repeatPassword}" placeholder=powtórz hasło>
+        <br/>
+        Wiek: <input type="number" th:field="*{age}" placeholder="wiek">
+        <br/>
+        <input type="submit" value="Zarejestruj">
+    </form>
+</center>
+</body>
+</html>
